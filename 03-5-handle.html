@@ -6,7 +6,8 @@
 
         <link rel="stylesheet" href="css/fonts.css">
         <link rel="stylesheet" href="css/styles.css">
-        <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="js/animate/animate.css">
 
         <meta name="viewport" content="width=device-width">
     </head>
@@ -117,10 +118,10 @@
                     <div class="page-welcome-content">
                         <div class="page-welcome-collection">
                             <div class="page-welcome-collection-main">
-                                <div class="page-welcome-epilog">Фурнитура</div>
-                                <h1>Ручка<br> <span>America</span><svg><use xlink:href="images/sprite.svg#icon-star"></use></svg></h1>
+                                <div class="page-welcome-epilog wow fadeInUpBig">Фурнитура</div>
+                                <h1 class="wow fadeInUpBig">Ручка<br> <span class="text-star-after">America</span></h1>
                             </div>
-                            <div class="page-welcome-collection-text">Для фасадов этой коллекции, мы&nbsp;использовали особую раскладку филенок, которые напоминает окна американских небоскребов.</div>
+                            <div class="page-welcome-collection-text wow fadeInUpBig">Для фасадов этой коллекции, мы&nbsp;использовали особую раскладку филенок, которые напоминает окна американских небоскребов.</div>
                         </div>
                     </div>
                 </div>
@@ -185,60 +186,66 @@
 
                         <!-- detail right -->
                         <div class="detail-right">
-                            <div class="detail-right-title">Выберите комплектацию</div>
-                            <div class="detail-filter">
-                                <form action="ajax/handle.html" method="post">
-                                    <div class="detail-filter-container">
-                                        <div class="detail-filter-content active">
-                                            <div class="detail-filter-models">
-                                                <div class="detail-filter-models-title">Цвета</div>
-                                                <div class="detail-filter-dividers-list">
-                                                    <div class="swiper">
-                                                        <div class="swiper-wrapper">
-                                                            <div class="swiper-slide">
-                                                                <label class="detail-filter-dividers-item"><input type="radio" name="color" value="01" checked><span><img src="files/handle-filter-01.jpg" alt=""></span></label>
+                            <div class="detail-right-inner">
+                                <div class="detail-right-title">Выберите комплектацию</div>
+                                <div class="detail-filter">
+                                    <form action="ajax/handle.html" method="post">
+                                        <div class="detail-filter-header">
+                                            <div class="detail-filter-header-title">Комплектация</div>
+                                            <a href="#" class="detail-filter-header-close"><svg><use xlink:href="images/sprite.svg#menu-close-link"></use></svg></a>
+                                        </div>
+                                        <div class="detail-filter-container">
+                                            <div class="detail-filter-content active">
+                                                <div class="detail-filter-models">
+                                                    <div class="detail-filter-models-title">Цвета</div>
+                                                    <div class="detail-filter-dividers-list">
+                                                        <div class="swiper">
+                                                            <div class="swiper-wrapper">
+                                                                <div class="swiper-slide">
+                                                                    <label class="detail-filter-dividers-item"><input type="radio" name="color" value="01" checked><span><img src="files/handle-filter-01.jpg" alt=""></span></label>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <label class="detail-filter-dividers-item"><input type="radio" name="color" value="02"><span><img src="files/handle-filter-02.jpg" alt=""></span></label>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <label class="detail-filter-dividers-item"><input type="radio" name="color" value="03"><span><img src="files/handle-filter-03.jpg" alt=""></span></label>
+                                                                </div>
+                                                                <div class="swiper-slide">
+                                                                    <label class="detail-filter-dividers-item"><input type="radio" name="color" value="04"><span><img src="files/handle-filter-04.jpg" alt=""></span></label>
+                                                                </div>
                                                             </div>
-                                                            <div class="swiper-slide">
-                                                                <label class="detail-filter-dividers-item"><input type="radio" name="color" value="02"><span><img src="files/handle-filter-02.jpg" alt=""></span></label>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <label class="detail-filter-dividers-item"><input type="radio" name="color" value="03"><span><img src="files/handle-filter-03.jpg" alt=""></span></label>
-                                                            </div>
-                                                            <div class="swiper-slide">
-                                                                <label class="detail-filter-dividers-item"><input type="radio" name="color" value="04"><span><img src="files/handle-filter-04.jpg" alt=""></span></label>
-                                                            </div>
+                                                            <div class="swiper-button-prev"><svg><use xlink:href="images/sprite.svg#catalogue-slider-prev"></use></svg></div>
+                                                            <div class="swiper-button-next"><svg><use xlink:href="images/sprite.svg#catalogue-slider-next"></use></svg></div>
                                                         </div>
-                                                        <div class="swiper-button-prev"><svg><use xlink:href="images/sprite.svg#catalogue-slider-prev"></use></svg></div>
-                                                        <div class="swiper-button-next"><svg><use xlink:href="images/sprite.svg#catalogue-slider-next"></use></svg></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="detail-filter-apply"><a href="#" class="btn">Выбрать</a></div>
-                                </form>
-                            </div>
+                                        <div class="detail-filter-apply"><a href="#" class="btn">Выбрать</a></div>
+                                    </form>
+                                </div>
 
-                            <div class="detail-info">
-                                <div class="detail-info-item">
-                                    <div class="detail-info-item-title">Где купить?<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
-                                    <div class="detail-info-item-content">
-                                        <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
-                                        <div class="detail-info-item-link"><a href="#">Смотреть адреса дилеров<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                <div class="detail-info">
+                                    <div class="detail-info-item">
+                                        <div class="detail-info-item-title">Где купить?<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
+                                        <div class="detail-info-item-content">
+                                            <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
+                                            <div class="detail-info-item-link"><a href="#">Смотреть адреса дилеров<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="detail-info-item">
-                                    <div class="detail-info-item-title">Доставка и оплата<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
-                                    <div class="detail-info-item-content">
-                                        <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
-                                        <div class="detail-info-item-link"><a href="#">Подробнее о доставке<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                    <div class="detail-info-item">
+                                        <div class="detail-info-item-title">Доставка и оплата<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
+                                        <div class="detail-info-item-content">
+                                            <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
+                                            <div class="detail-info-item-link"><a href="#">Подробнее о доставке<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="detail-info-item">
-                                    <div class="detail-info-item-title">Сервис и гарантия<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
-                                    <div class="detail-info-item-content">
-                                        <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
-                                        <div class="detail-info-item-link"><a href="#">Подробнее о гарантии<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                    <div class="detail-info-item">
+                                        <div class="detail-info-item-title">Сервис и гарантия<svg><use xlink:href="images/sprite.svg#icon-plus"></use></svg><svg><use xlink:href="images/sprite.svg#icon-minus"></use></svg></div>
+                                        <div class="detail-info-item-content">
+                                            <p>Мы&nbsp;осуществляем доставку по&nbsp;Москве и&nbsp;Московской области. Также, в&nbsp;случае необходимости, вы&nbsp;можете забрать свой заказ в&nbsp;пункте самовывоза. При заказе мебели в&nbsp;регионы мы&nbsp;обеспечиваем доставку груза до&nbsp;терминала транспортной компании. Подробные условия всегда можно уточнить у&nbsp;наших менеджеров.</p>
+                                            <div class="detail-info-item-link"><a href="#">Подробнее о гарантии<svg><use xlink:href="images/sprite.svg#link-arrow"></use></svg></a></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -255,12 +262,12 @@
                             <div class="swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="#" class="catalogue-slider-item">
+                                        <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                             <div class="catalogue-slider-item-preview">
                                                 <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-15.jpg)"></div>
                                             </div>
                                             <div class="catalogue-slider-item-text">
-                                                <div class="catalogue-slider-item-title">London</div>
+                                                <div class="catalogue-slider-item-title"><span>London</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                 <div class="catalogue-slider-item-params">
                                                     <div class="catalogue-slider-item-param">Решения вне времени для интерьеров</div>
                                                 </div>
@@ -268,12 +275,12 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="catalogue-slider-item">
+                                        <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                             <div class="catalogue-slider-item-preview">
                                                 <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-18.jpg)"></div>
                                             </div>
                                             <div class="catalogue-slider-item-text">
-                                                <div class="catalogue-slider-item-title">Arno</div>
+                                                <div class="catalogue-slider-item-title"><span>Arno</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                 <div class="catalogue-slider-item-params">
                                                     <div class="catalogue-slider-item-param">Решения вне времени для интерьеров</div>
                                                 </div>
@@ -281,12 +288,12 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="catalogue-slider-item">
+                                        <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                             <div class="catalogue-slider-item-preview">
                                                 <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-17.jpg)"></div>
                                             </div>
                                             <div class="catalogue-slider-item-text">
-                                                <div class="catalogue-slider-item-title">Nicole</div>
+                                                <div class="catalogue-slider-item-title"><span>Nicole</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                 <div class="catalogue-slider-item-params">
                                                     <div class="catalogue-slider-item-param">Решения вне времени для интерьеров</div>
                                                 </div>
@@ -294,12 +301,12 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="catalogue-slider-item">
+                                        <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                             <div class="catalogue-slider-item-preview">
                                                 <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-04.jpg)"></div>
                                             </div>
                                             <div class="catalogue-slider-item-text">
-                                                <div class="catalogue-slider-item-title">Plano</div>
+                                                <div class="catalogue-slider-item-title"><span>Plano</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                 <div class="catalogue-slider-item-params">
                                                     <div class="catalogue-slider-item-param">Решения вне времени для интерьеров</div>
                                                 </div>
@@ -307,12 +314,12 @@
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
-                                        <a href="#" class="catalogue-slider-item">
+                                        <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                             <div class="catalogue-slider-item-preview">
                                                 <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-05.jpg)"></div>
                                             </div>
                                             <div class="catalogue-slider-item-text">
-                                                <div class="catalogue-slider-item-title">Nicole</div>
+                                                <div class="catalogue-slider-item-title"><span>Nicole</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                 <div class="catalogue-slider-item-params">
                                                     <div class="catalogue-slider-item-param">Решения вне времени для интерьеров</div>
                                                 </div>
@@ -328,7 +335,7 @@
                     <!-- detail for END -->
 
                     <!-- collection about -->
-                    <div class="collection-about">
+                    <div class="collection-about wow fadeInUpBig">
                         <div class="collection-about-gallery">
                             <div class="swiper">
                                 <div class="swiper-wrapper">
@@ -353,10 +360,10 @@
                         <div class="about-showroom-bg" style="background-image:url(files/about-showroom.jpg)"></div>
                         <div class="about-showroom-container">
                             <div class="about-showroom-info">
-                                <div class="about-showroom-title">Приходите к&nbsp;нам<br> в&nbsp;гости в&nbsp;наши <span>шоу-румы</span><svg><use xlink:href="images/sprite.svg#icon-star"></use></svg></div>
-                                <div class="about-showroom-btn"><a href="#" class="btn btn-mini btn-light"><span>Смотреть адреса</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></a></div>
+                                <div class="about-showroom-title wow fadeInUpBig">Приходите к&nbsp;нам<br> в&nbsp;гости в&nbsp;наши <span class="text-star-after">шоу-румы</span></div>
+                                <div class="about-showroom-btn wow fadeInUpBig"><a href="#" class="btn btn-mini btn-light"><span>Смотреть адреса</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></a></div>
                             </div>
-                            <div class="about-showroom-text">Rocca (в&nbsp;переводе с&nbsp;итал. &laquo;скала&raquo;)&nbsp;&mdash; неоклассическая коллекция со&nbsp;строгими лаконичными формами и&nbsp;четкими очертаниями профиля. Рисунок на&nbsp;двери выполнен по&nbsp;технологии фрезерования, позволяющей наносить любое изображение на&nbsp;цельную поверхность полотна.</div>
+                            <div class="about-showroom-text wow fadeInUpBig">Rocca (в&nbsp;переводе с&nbsp;итал. &laquo;скала&raquo;)&nbsp;&mdash; неоклассическая коллекция со&nbsp;строгими лаконичными формами и&nbsp;четкими очертаниями профиля. Рисунок на&nbsp;двери выполнен по&nbsp;технологии фрезерования, позволяющей наносить любое изображение на&nbsp;цельную поверхность полотна.</div>
                         </div>
                     </div>
 
@@ -365,17 +372,17 @@
 
                         <!-- catalogue section -->
                         <div class="catalogue-section">
-                            <div class="catalogue-section-title">Смотрите так же</div>
+                            <div class="catalogue-section-title wow fadeInUpBig">Смотрите так же</div>
                             <div class="catalogue-slider">
                                 <div class="swiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <a href="#" class="catalogue-slider-item">
+                                            <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                                 <div class="catalogue-slider-item-preview">
                                                     <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-handles-01.jpg)"></div>
                                                 </div>
                                                 <div class="catalogue-slider-item-text">
-                                                    <div class="catalogue-slider-item-title">Дверная ручка Daniella</div>
+                                                    <div class="catalogue-slider-item-title"><span>Дверная ручка Daniella</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                     <div class="catalogue-slider-item-params">
                                                         <div class="catalogue-slider-item-param">Золото</div>
                                                         <div class="catalogue-slider-item-param">Mirella</div>
@@ -385,12 +392,12 @@
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="#" class="catalogue-slider-item">
+                                            <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                                 <div class="catalogue-slider-item-preview">
                                                     <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-handles-02.jpg)"></div>
                                                 </div>
                                                 <div class="catalogue-slider-item-text">
-                                                    <div class="catalogue-slider-item-title">Дверная ручка Daniella</div>
+                                                    <div class="catalogue-slider-item-title"><span>Дверная ручка Daniella</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                     <div class="catalogue-slider-item-params">
                                                         <div class="catalogue-slider-item-param">Серебро</div>
                                                         <div class="catalogue-slider-item-param">Mirella</div>
@@ -400,12 +407,12 @@
                                             </a>
                                         </div>
                                         <div class="swiper-slide">
-                                            <a href="#" class="catalogue-slider-item">
+                                            <a href="#" class="catalogue-slider-item wow fadeInUpBig">
                                                 <div class="catalogue-slider-item-preview">
                                                     <div class="catalogue-slider-item-preview-inner" style="background-image:url(files/catalogue-handles-03.jpg)"></div>
                                                 </div>
                                                 <div class="catalogue-slider-item-text">
-                                                    <div class="catalogue-slider-item-title">Дверная ручка Daniella</div>
+                                                    <div class="catalogue-slider-item-title"><span>Дверная ручка Daniella</span><svg><use xlink:href="images/sprite.svg#btn-arrow"></use></svg></div>
                                                     <div class="catalogue-slider-item-params">
                                                         <div class="catalogue-slider-item-param">Темно-серый</div>
                                                         <div class="catalogue-slider-item-param">Mirella</div>
@@ -432,8 +439,7 @@
             <!-- wrapper inner END -->
 
             <footer>
-                <div class="footer-bg"><video autoplay muted loop><source src="images/footer-bg.mp4" type="video/mp4"></video></div>
-                <div class="footer-shadow"></div>
+                <div class="footer-bg"><video autoplay muted loop playsinline><source src="images/footer-bg.mp4" type="video/mp4"></video></div>
                 <div class="container">
 
                     <div class="footer-top">
@@ -523,6 +529,7 @@
         <script src="js/jquery.mask.min.js"></script>
         <script src="js/validation/jquery.validate.min.js"></script>
         <script src="js/validation/messages_ru.js"></script>
+        <script src="js/animate/wow.min.js"></script>
         <script src="js/tools.js"></script>
 
     </body>
