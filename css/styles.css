@@ -1938,14 +1938,14 @@ footer .container {position:relative}
 
 .window-params {display:none; position:fixed; align-items:flex-start; justify-content:flex-end; left:0; top:0; right:0; bottom:0; overflow:auto; z-index:9999; background:rgba(43, 43, 42, 0.3)}
 .window-params-open .window-params {display:flex}
-.window-params-container {position:relative; min-width:730px; max-width:730px; background:#FFFFFF; padding:50px}
+.window-params-container {position:relative; min-width:730px; max-width:730px; background:#FFFFFF; padding:50px 50px 0 50px}
 .window-params-close {position:absolute; left:-40px; top:0; width:40px; height:40px; background:#2B2B2A; transition:background 0.2s}
 @media (min-width:1200px) {
     .window-params-close:hover {background:#D62137}
 }
 .window-params-close svg {display:block; width:40px; height:40px; fill:#FFFFFF}
 .window-params-title {display:none}
-.window-params-list {column-count:2; column-gap:40px; margin:0 0 -63px 0}
+.window-params-list {column-count:2; column-gap:40px}
 .window-params-group {padding:0 0 63px 0; -webkit-column-break-inside:avoid; page-break-inside:avoid; break-inside:avoid; break-inside:avoid-column}
 .window-params-group-title {font-size:20px; line-height:27px}
 .window-params-group-title svg {display:none}
