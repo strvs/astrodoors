@@ -455,8 +455,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 
 .page-welcome {height:720px; display:flex; align-items:flex-end; position:relative; padding:92px 145px 110px 145px; background:#000000; overflow:hidden}
 .page-welcome-about {height:auto; min-height:100vh; padding-bottom:100px}
-.page-welcome-bg {position:absolute; left:50%; top:50%; width:100%; padding:56.25% 0 0 0; transform:translate(-50%, -50%); background:no-repeat center; background-size:cover}
-.page-welcome-bg video {position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:-1}
+.page-welcome-bg {position:absolute; left:50%; top:50%; width:100%; padding:56.25% 0 0 0; transform:translate(-50%, -50%); background:#000000 no-repeat center; background-size:cover}
+.page-welcome-bg video {position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none; z-index:-1; opacity:0.6}
 .page-welcome-shadow {position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(0, 0, 0, 0.4)}
 .page-welcome-content {position:relative; color:#FFFFFF; width:100%}
 .page-welcome-about .page-welcome-content {max-width:1213px}
