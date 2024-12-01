@@ -57,9 +57,12 @@ ol > li::before {content:counter(point); counter-increment:point 1; position:abs
 
 .btn-border {background:#FFFFFF; padding:0 24px; border:1px solid #D9D9D9; color:#2B2B2A}
 @media (min-width:1200px) {
-    .btn-border:hover {color:#2B2B2A; background:#F3F3F3}
+    .btn-border:hover {color:#FFFFFF; background:#757575; border-color:#757575}
 }
 .btn-border svg {stroke:#2B2B2A}
+@media (min-width:1200px) {
+    .btn-border:hover svg {stroke:#FFFFFF}
+}
 
 .form-input {margin:30px 0; position:relative}
 .form-input-label {position:absolute; left:0; top:20px; font-weight:500; font-size:14px; line-height:19px; letter-spacing:0; color:#757575; transition:all 0.2s; z-index:1; pointer-events:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; right:0}
@@ -363,9 +366,9 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
     .main-catalogue-item a:hover .main-catalogue-item-title svg {opacity:1}
 }
 .main-catalogue-item-anonce {margin:5px 0 0 0; font-size:14px; line-height:19px; color:#757575}
-.main-catalogue-item-btn {margin:0 0 0 5px; padding:10px 24px; border:1px solid #D9D9D9; color:#2B2B2A; transition:background 0.2s}
+.main-catalogue-item-btn {margin:0 0 0 5px; padding:10px 24px; border:1px solid #D9D9D9; color:#2B2B2A; transition:background 0.2s, color 0.2s}
 @media (min-width:1200px) {
-    .main-catalogue-item-btn:hover {background:#F3F3F3}
+    .main-catalogue-item-btn:hover {background:#757575; color:#FFFFFF}
 }
 
 @media (max-width:1199px) {
@@ -731,32 +734,20 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .detail-left {min-width:725px; max-width:725px; position:relative}
 .detail-left.loading::after {content:""; position:absolute; z-index:3; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.svg) no-repeat center}
 .detail-gallery {border:1px solid #D9D9D9}
-.detail-gallery .swiper {position:relative}
-.detail-gallery .swiper-slide {display:flex; align-items:center; justify-content:center; height:725px}
-.detail-gallery .swiper-slide img {height:92%; max-width:none}
-.detail-gallery .swiper-button-prev,
-.detail-gallery .swiper-button-next {position:absolute; z-index:2; top:50%; width:40px; height:40px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:rgba(11, 11, 11, 0.4); transform:translateY(-50%); opacity:1; transition:none; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(1.5px); transition:background 0.2s}
+.detail-gallery a {display:flex; align-items:center; justify-content:center; height:725px; position:relative; overflow:hidden}
+.detail-gallery img {height:92%; max-width:none; transition:transform 0.2s}
 @media (min-width:1200px) {
-    .detail-gallery .swiper-button-prev:hover,
-    .detail-gallery .swiper-button-next:hover {background:rgba(11, 11, 11, 0.8)}
+    .detail-gallery:hover img {transform:scale(1.1)}
 }
-.detail-gallery .swiper-button-prev.swiper-button-lock,
-.detail-gallery .swiper-button-next.swiper-button-lock {display:none}
-.detail-gallery .swiper-button-prev::after,
-.detail-gallery .swiper-button-next::after {display:none}
-.detail-gallery .swiper-button-prev {left:0}
-.detail-gallery .swiper-button-next {right:0}
-.detail-gallery .swiper-button-prev svg,
-.detail-gallery .swiper-button-next svg {display:block; width:24px; height:24px; margin:0; fill:none; stroke:#FFFFFF}
 
 @media (max-width:1680px) {
     .detail-left {min-width:550px; max-width:550px}
-    .detail-gallery .swiper-slide {height:550px}
+    .detail-gallery a {height:550px}
 }
 
 @media (max-width:1440px) {
     .detail-left {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
-    .detail-gallery .swiper-slide {height:360px}
+    .detail-gallery a {height:360px}
 }
 
 @media (max-width:1199px) {
@@ -1473,6 +1464,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .window-photo-slider .swiper-button-next {right:0}
 .window-photo-slider .swiper-button-prev svg,
 .window-photo-slider .swiper-button-next svg {display:block; width:24px; height:24px; fill:none; stroke:#FFFFFF}
+.window-photo-slider .swiper-button-prev.swiper-button-lock,
+.window-photo-slider .swiper-button-next.swiper-button-lock {display:none}
 
 .window-photo-close {position:absolute; right:0; top:0; z-index:99}
 .window-photo-close svg {display:block; fill:#2B2B2A; transition:fill 0.2s; width:60px; height:60px}

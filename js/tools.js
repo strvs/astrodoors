@@ -147,18 +147,6 @@ $(document).ready(function() {
         });
     });
 
-    $('.detail-gallery').each(function() {
-        var curSlider = $(this);
-        var swiper = new Swiper(curSlider.find('.swiper')[0], {
-            loop: true,
-            slidesPerView: 1,
-            navigation: {
-                nextEl: curSlider.find('.swiper-button-next')[0],
-                prevEl: curSlider.find('.swiper-button-prev')[0]
-            },
-        });
-    });
-
     $('.detail-filter-menu-item').click(function() {
         var curItem = $(this);
         if (!curItem.hasClass('active')) {
@@ -209,17 +197,6 @@ $(document).ready(function() {
                 cache: false
             }).done(function(html) {
                 $('.detail-left').html(html);
-                $('.detail-gallery').each(function() {
-                    var curSlider = $(this);
-                    var swiper = new Swiper(curSlider.find('.swiper')[0], {
-                        loop: true,
-                        slidesPerView: 1,
-                        navigation: {
-                            nextEl: curSlider.find('.swiper-button-next')[0],
-                            prevEl: curSlider.find('.swiper-button-prev')[0]
-                        },
-                    });
-                });
                 $('.detail-left').removeClass('loading');
             });
         }
@@ -263,17 +240,6 @@ $(document).ready(function() {
             cache: false
         }).done(function(html) {
             $('.detail-left').html(html);
-            $('.detail-gallery').each(function() {
-                var curSlider = $(this);
-                var swiper = new Swiper(curSlider.find('.swiper')[0], {
-                    loop: true,
-                    slidesPerView: 1,
-                    navigation: {
-                        nextEl: curSlider.find('.swiper-button-next')[0],
-                        prevEl: curSlider.find('.swiper-button-prev')[0]
-                    },
-                });
-            });
             $('.detail-left').removeClass('loading');
         });
         e.preventDefault();
