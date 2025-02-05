@@ -202,6 +202,24 @@ $(document).ready(function() {
         }
     });
 
+    $('.detail-filter form').each(function() {
+        $('.detail-left').addClass('loading');
+        var curForm = $('.detail-filter form');
+        var formData = new FormData(curForm[0]);
+        $.ajax({
+            type: 'POST',
+            url: curForm.attr('action'),
+            processData: false,
+            contentType: false,
+            dataType: 'html',
+            data: formData,
+            cache: false
+        }).done(function(html) {
+            $('.detail-left').html(html);
+            $('.detail-left').removeClass('loading');
+        });
+    });
+
     $('body').on('click', '.detail-filter-mobile-link a', function(e) {
         var curPadding = $('.wrapper').width();
         var curScroll = $(window).scrollTop();
@@ -893,6 +911,25 @@ function windowOpen(linkWindow, dataWindow) {
         window.setTimeout(function() {
             $('.window-container-preload').removeClass('window-container-preload');
         }, 100);
+
+        $('.window-calc-detail-photo').each(function() {
+            $('.window-calc-detail-photo img').attr('src', $('.detail-gallery img').attr('src'));
+        });
+
+        $('.window-calc-detail-content').each(function() {
+            var newHTML = '';
+            var detailText = '';
+            $('.detail-param').each(function() {
+                var curParam = $(this);
+                newHTML +=  '<div class="window-calc-detail-row">' +
+                                '<div class="window-calc-detail-row-title">' + curParam.find('.detail-param-title').html() + '</div>' +
+                                '<div class="window-calc-detail-row-text">' + curParam.find('.detail-param-value').html() + '</div>' +
+                            '</div>';
+                detailText += curParam.find('.detail-param-title').html() + ': ' + curParam.find('.detail-param-value').html() + '\n';
+            });
+            detailText += 'Цена: ' + $('.detail-result-cost-value-text').html();
+            $('.window-calc-detail-content').html(newHTML + '<input type="hidden" name="detail" value="' + detailText + '">');
+        });
 
         $('.window form').each(function() {
             initForm($(this));
