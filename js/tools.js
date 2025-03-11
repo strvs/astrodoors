@@ -929,6 +929,22 @@ function windowOpen(linkWindow, dataWindow) {
             });
             detailText += 'Цена: ' + $('.detail-result-cost-value-text').html();
             $('.window-calc-detail-content').html(newHTML + '<input type="hidden" name="detail" value="' + detailText + '">');
+            $('.detail-filter-models-item input:checked').each(function() {
+                var curInput = $(this);
+                $('.window-calc-detail-content').append('<input type="hidden" name="' + curInput.attr('name') + '" value="' + curInput.attr('value') + '">');
+            });
+            $('.detail-filter-borders-item input:checked').each(function() {
+                var curInput = $(this);
+                $('.window-calc-detail-content').append('<input type="hidden" name="' + curInput.attr('name') + '" value="' + curInput.attr('value') + '">');
+            });
+            $('.detail-filter-finishing-item input:checked').each(function() {
+                var curInput = $(this);
+                $('.window-calc-detail-content').append('<input type="hidden" name="' + curInput.attr('name') + '" value="' + curInput.attr('value') + '">');
+            });
+            $('.detail-filter-dividers-item input:checked').each(function() {
+                var curInput = $(this);
+                $('.window-calc-detail-content').append('<input type="hidden" name="' + curInput.attr('name') + '" value="' + curInput.attr('value') + '">');
+            });
         });
 
         $('.window form').each(function() {
