@@ -735,7 +735,8 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 .detail-left.loading::after {content:""; position:absolute; z-index:3; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading.svg) no-repeat center}
 .detail-gallery {border:1px solid #D9D9D9}
 .detail-gallery .swiper {position:relative}
-.detail-gallery .swiper-slide a {display:flex; align-items:center; justify-content:center; height:725px; position:relative; overflow:hidden}
+.detail-gallery .swiper-slide a,
+.detail-gallery .swiper-slide div {display:flex; align-items:center; justify-content:center; height:725px; position:relative; overflow:hidden}
 .detail-gallery .swiper-slide img {height:92%; max-width:none; transition:transform 0.2s}
 @media (min-width:1200px) {
     .detail-gallery .swiper-slide a:hover img {transform:scale(1.1)}
@@ -757,12 +758,14 @@ header {position:absolute; left:0; top:0; right:0; z-index:20}
 
 @media (max-width:1680px) {
     .detail-left {min-width:550px; max-width:550px}
-    .detail-gallery .swiper-slide a {height:550px}
+    .detail-gallery .swiper-slide a,
+    .detail-gallery .swiper-slide div {height:550px}
 }
 
 @media (max-width:1440px) {
     .detail-left {min-width:calc(50% - 20px); max-width:calc(50% - 20px)}
-    .detail-gallery .swiper-slide a {height:360px}
+    .detail-gallery .swiper-slide a,
+    .detail-gallery .swiper-slide div {height:360px}
 }
 
 @media (max-width:1199px) {
