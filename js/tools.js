@@ -167,6 +167,7 @@ $(document).ready(function() {
             var curIndex = $('.detail-filter-menu-item').index(curItem);
             $('.detail-filter-content.active').removeClass('active');
             $('.detail-filter-content').eq(curIndex).addClass('active');
+            $(window).trigger('resize');
         }
     });
 
